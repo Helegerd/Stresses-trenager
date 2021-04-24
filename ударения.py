@@ -122,10 +122,8 @@ class StressRus(QMainWindow, QWidget):
         
     def showtrueans(self):
         '''показывает правильный слог'''
-        for i in range(len(self.wordparts)):
-            if i == self.rightpart - 1:
-                continue
-            self.buttons[i].hide()
+        self.sender().setStyleSheet("background-color: rgb(250, 50, 50)")
+        self.buttons[self.rightpart - 1].setStyleSheet("background-color: rgb(50, 250, 50)")
     
     def choose_noun(self):
         self.loadFile = 'слова_слоги_сущ.txt'
